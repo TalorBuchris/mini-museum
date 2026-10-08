@@ -1,89 +1,103 @@
 /* ===== Step 2: Type Selectors ===== */
+/*  */
+body {
+    background-color: #0b0f19;
+    color: #f8fafc;
+    /* color: #94a3b8; */
+    text-align: center;
+    margin: 0;
+}
 
 h1 {
-  color: darkslateblue;
-  font-size: 40px;
+    color: #76bafd;
+    font-size: 32px;
+    background-color: #2f406d;
+
 }
 
 h2 {
-  color: teal;
-  font-size: 28px;
+    color: #afd4f8;
+    font-size: 22px;
 }
 
+a {
+    color: #94a3b8;
+}
+
+a:hover {
+    color: white;
+}
+
+p {
+    text-align: justify;
+}
+
+/* index */
 nav a {
-  text-transform: uppercase;
-  font-weight: bold;
+    text-transform: uppercase;
+    font-weight: 500;
 }
 
 footer {
-  background-color: #333333;
-  color: white;
+    background-color: #082b5f;
+    color: gray;
 }
 
-/* ===== Step 3: Class Selectors ===== */
+/* artists */
+#artist-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
 .artist-card {
-  border: 2px solid darkslateblue;
-  border-radius: 10px;
-  background-color: lavender;
+    text-align: center;
+    width: 20vw;
+    border: 2px solid #76bafd;
+    border-radius: 25px;
+    padding: 3%;
+    margin: 3vw;
+    position: sticky;
+    background-color: #182137;
 }
 
-.thumbnail {
-  border: 3px solid #333333;
-  border-radius: 8px;
+/* gallery */
+#gallery-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-/* ===== Step 4: Id Selectors ===== */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    align-items: flex-end;
 
-#vangogh h2 {
-  color: goldenrod;
+    border: 2px solid #76bafd;
+    border-radius: 10px;
+    padding: 3vw;
+    margin: 2vw;
 }
 
-#monet h2 {
-  color: cornflowerblue;
+.thumbnail img {
+    border: 1px solid #76bafd;
+    border-radius: 10px;
+    width: 150px;
+
 }
 
-#rembrandt h2 {
-  color: saddlebrown;
+/* .gogh-work,
+    .vinci-work,
+    .picasso-work {
+    } */
+
+.work-popup {
+    display: none;
 }
 
-#welcome-text {
-  font-size: 22px;
+.work-popup:target {
+    display: block;
+    height: 99vh;
 }
-
-/* ===== Step 5: Parent + Child Selectors ===== */
-
-header nav a {
-  color: darkslateblue;
-}
-
-main article h2 {
-  font-size: 32px;
-}
-
-footer a {
-  color: white;
-}
-
-/* ===== Step 6: Specificity Check ===== */
-
-/*
-  The "Visit Us" <h2> in visit.html has class="section-title".
-  Two rules try to color it:
-    h2             { color: teal; }     (type selector, Step 2)
-    .section-title { color: crimson; }  (class selector, below)
-  Crimson wins: a class selector is more specific than a type selector,
-  so it wins no matter which rule comes first in the file.
-*/
-
-.section-title {
-  color: crimson;
-}
-
-/*
-  Specificity scores (id, class, type):
-    h2              -> (0, 0, 1)  one type
-    .artist-card    -> (0, 1, 0)  one class
-    #vangogh h2     -> (1, 0, 1)  one id + one type
-    header nav a    -> (0, 0, 3)  three types
-*/
