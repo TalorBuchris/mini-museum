@@ -1,18 +1,76 @@
 /* ===== Step 2: Type Selectors ===== */
-/*  */
+/* navbar */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #afd4f8;
+    padding: 0;
+    height: 4vw;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+    gap: 10px;
+}
+
+.logo {
+    width: 70px;
+}
+
+nav span {
+    color: #0b0f19;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    font-size: 22px;
+    gap: 5vw;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+
+nav ul li {
+    display: flex;
+    height: 100%;
+}
+
+nav ul li a {
+    /* 1+1+1+1=4 */
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #0b0f19;
+    padding: 0 25px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #afd4f8;
+    background-color: #0b0f19;
+
+}
+
+/* general */
 body {
     background-color: #0b0f19;
     color: #f8fafc;
-    /* color: #94a3b8; */
     text-align: center;
     margin: 0;
 }
 
 h1 {
-    color: #76bafd;
+    color: #0b0f19;
     font-size: 32px;
-    background-color: #2f406d;
-
+    background-color: #afd4f8;
+    padding: 1vw;
 }
 
 h2 {
@@ -33,14 +91,59 @@ p {
 }
 
 /* index */
-nav a {
-    text-transform: uppercase;
-    font-weight: 500;
+#home-main {
+    background-image: url("../img/art-museum.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-top: 1px solid #0b0f19;
+    height: 90vh;
+    margin: 0 auto;
+    padding: 5vh 0 5vh 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#home-card {
+    text-align: center;
+    width: 40vw;
+    border: 2px solid #76bafd;
+    border-radius: 25px;
+    padding: 3%;
+    position: sticky;
+    background-color: #182137;
+    opacity: 0.8;
+}
+
+#wellcome {
+    font-size: larger;
 }
 
 footer {
-    background-color: #082b5f;
-    color: gray;
+    background-color: #182137;
+    opacity: 0.9;
+    color: #6dacea;
+    align-items: center;
+    padding: 1vw;
+}
+
+footer ul {
+    /* 1+1=2 */
+    list-style-type: none;
+    padding: 0;
+    width: fit-content;
+    margin: 0 auto;
+
+}
+
+footer p {
+    text-align: center;
+}
+
+#logo-footer {
+    width: 90px;
 }
 
 /* artists */
@@ -50,15 +153,39 @@ footer {
     justify-content: center;
 }
 
-.artist-card {
+#artist-main .artist-card {
+    /* 100+10=110 */
     text-align: center;
     width: 20vw;
-    border: 2px solid #76bafd;
     border-radius: 25px;
     padding: 3%;
     margin: 3vw;
     position: sticky;
     background-color: #182137;
+}
+
+#artist-card1 {
+    border: 2px solid #fdd776;
+}
+
+#artist-card2 {
+    border: 2px solid #76fd93;
+}
+
+#artist-card3 {
+    border: 2px solid #fd76c9;
+}
+
+#name-art1 {
+    color: #fdd776;
+}
+
+#name-art2 {
+    color: #76fd93;
+}
+
+#name-art3 {
+    color: #fd76c9;
 }
 
 /* gallery */
@@ -88,16 +215,73 @@ footer {
 
 }
 
-/* .gogh-work,
-    .vinci-work,
-    .picasso-work {
-    } */
-
 .work-popup {
     display: none;
+    height: 90vh;
 }
 
 .work-popup:target {
+    /* height: 90px; */
     display: block;
-    height: 99vh;
+
+    .img-popup {
+        height: 92vh;
+    }
 }
+
+/* visit us */
+.visit-box {
+    background-color: #182137;
+    border: 2px solid #76bafd;
+    border-radius: 20px;
+    width: 40vw;
+    margin: 2vw;
+    padding: 1vw;
+}
+
+#visitH {
+    list-style-type: none;
+    padding: 0;
+}
+
+.visit-box a {
+    text-decoration: none;
+}
+
+#all {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1vh;
+}
+
+iframe{
+    border-radius: 15px;  
+    width: 600px;
+    height: 410px;
+    border: 4px solid #76bafd;
+    /* width="600" height="450" style="border:0;" */
+}
+
+
+/* 
+===== step 6 =====
+---- 1 ----
+body { 1 point
+    color: #f8fafc;
+}
+
+nav ul li a { 1 + 1 + 1 + 1 = 4 points
+    color: #0b0f19;
+}
+
+---- 2 ----
+h2 { 1 point
+    color: #afd4f8;
+}
+
+#name-art1 { 100 points
+    color: #fdd776;
+}
+
+*/
